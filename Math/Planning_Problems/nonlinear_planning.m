@@ -13,12 +13,12 @@ beq = [];
 
 [x, fval, exitflag, output] = fmincon(@fun44, x0, A, b, Aeq, beq, lb, ub, @mycon1)
 
-% 定义目标函数
+%% 定义目标函数
 function f = fun44(x)
 f = -(sqrt(x(1))+sqrt(x(2))+sqrt(x(3))+sqrt(x(4)));
 end
 
-% 定义自变量范围
+%% 定义自变量范围
 function [g, ceq] = mycon1(x)
 g(1) = x(1) - 400;
 g(2) = 1.1*x(1) + x(2) - 440;
